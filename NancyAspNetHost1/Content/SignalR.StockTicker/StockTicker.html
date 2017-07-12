@@ -1,0 +1,27 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>ASP.NET SignalR Stock Ticker</title>
+    <link href="StockTicker.css" rel="stylesheet" />
+</head>
+<body>
+    <h1>GET queries and responses</h1>
+
+    <input type="button" id="reset" value="Clear Data" />
+
+    <div id="stockTable">
+        <table border="1">
+            <tbody>
+                <tr class="loading"><td colspan="7">loading...</td></tr>
+            </tbody>
+        </table>
+    </div>
+
+
+    <script src="jquery-1.10.2.min.js"></script>
+    <script src="jquery.color-2.1.2.min.js"></script>
+    <script src="jquery.signalR-2.2.2.js"></script>
+    <script src="../../signalr/hubs"></script>
+    <script src="SignalR.StockTicker.js"></script>
+</body>
+</html>
