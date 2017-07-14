@@ -101,6 +101,7 @@
     <Content Include="Content\SignalR.StockTicker\jquery-1.10.2.min.js" />
     <Content Include="Content\SignalR.StockTicker\jquery.color-2.1.2.min.js" />
     <Content Include="Content\SignalR.StockTicker\SignalR.StockTicker.js" />
+    <Content Include="Content\SignalR.StockTicker\StockTickerAjax.html" />
     <Content Include="Content\SignalR.StockTicker\StockTicker.css" />
     <Content Include="Content\SignalR.StockTicker\StockTicker.html" />
     <Content Include="icon.png" />

@@ -146,7 +146,7 @@ namespace Microsoft.AspNet.SignalR.StockTicker
             Stock stock = new Stock();
             stock.Query = message;
             stock.Symbol = "client";
-
+            InMemoryMessageCache.Add(stock);
 
             Instance.BroadcastStockPrice(stock);
         }
@@ -190,6 +190,22 @@ namespace Microsoft.AspNet.SignalR.StockTicker
         private void BroadcastStockPrice(Stock stock)
         {
             Clients.All.updateStockPrice(stock);
+        }
+    }
+
+    public class InMemoryMessageCache
+    {
+
+        static List<Stock> cache=new List<Stock>();
+        public static void Add(Stock stock)
+        {
+            cache.Add(stock);
+
+        }
+
+        public static List<Stock> Get()
+        {
+            return cache;
         }
     }
 

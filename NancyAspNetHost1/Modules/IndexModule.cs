@@ -2,6 +2,7 @@
 using System.IO;
 using Microsoft.AspNet.SignalR.StockTicker;
 using Nancy;
+using Newtonsoft.Json;
 
 namespace NancyAspNetHost1.Modules
 {
@@ -10,7 +11,9 @@ namespace NancyAspNetHost1.Modules
         static string GlobalLog;
         public IndexModule()
         {
-			Get["/Report"] = parameters =>
+              Get["/MessageCache"] = _ => JsonConvert.SerializeObject( InMemoryMessageCache.Get());
+
+            Get["/Report"] = parameters =>
 			{
 				return View["report"];
 			};
@@ -28,6 +31,7 @@ namespace NancyAspNetHost1.Modules
             //    return View["report"];
             //};
             Get["/"] = parameters => { return HandleQuery(parameters); };
+
 
         }
 
