@@ -23,7 +23,7 @@
     var $tbody = $('tbody');
     
                setInterval(function () {
-        $.getJSON('/xsclient0/MessageCache', function (data) {
+                   $.getJSON('/XSClient_Reza/MessageCache', function (data) {
           
             $tbody.html('');
             $.each(data, function (i, d) {
