@@ -1,0 +1,11 @@
+version: 1.0.{build}
+before_build:
+- cmd: nuget restore
+build:
+  publish_wap: true
+  verbosity: minimal
+deploy:
+  provider: Environment
+  name: XPCloudClient
+  on:
+    branch: master
